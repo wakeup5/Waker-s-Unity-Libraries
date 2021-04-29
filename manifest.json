@@ -1,0 +1,8 @@
+{
+    "registry": "https://github.com/wakeup5/Waker-s-Unity-Libraries",
+    "dependencies": {
+        "com.neuecc.unirx": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
+        "net.gree.unity-webview": "https://github.com/gree/unity-webview.git?path=/dist/package",
+        "com.google.external-dependency-manager": "https://github.com/googlesamples/unity-jar-resolver/tree/master/plugin/Assets/ExternalDependencyManager"
+    }
+  }

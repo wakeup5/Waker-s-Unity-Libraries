@@ -1,0 +1,7 @@
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="com.android.installreferrer:installreferrer:2.1" />
+    <androidPackage spec="com.google.android.gms:play-services-analytics:17.0.0" />
+  </androidPackages>
+</dependencies>
+

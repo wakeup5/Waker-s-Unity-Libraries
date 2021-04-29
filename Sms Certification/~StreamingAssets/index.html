@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <!-- iamport.payment.js -->
+    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.6.js"></script>
+
+    <!-- 인증 스크립트 -->
+    <script>
+        var IMP = window.IMP; // 생략해도 괜찮습니다.
+        IMP.init("imp44217772"); // "imp00000000" 대신 발급받은 "가맹점 식별코드"를 사용합니다.
+
+        var param = {
+            min_age: 19
+        }
+
+        function onResponse(rsp) {
+            console.log('결과')
+            console.log(JSON.stringify(rsp));
+
+            if (rsp.success) {
+                Unity.call('/onSuccess');
+            } else {
+                Unity.call('/onFailed');
+            }
+        }
+
+        IMP.certification(param, onResponse);
+    </script>
+
+    <!-- HTML 화면 사이즈 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header>
+        <p>창을 종료합니다.</p>
+        <button onclick="Unity.call('/close')">닫기</button>
+    </header>
+</body>
+
+</html>
